@@ -10,15 +10,8 @@ int main(void)
 
 	for (a = 97; a < 123; a++)
 	{
-		if (a == 122)
-		{
-			putchar(a);
-			putchar('\n');
-		}
-		else
-		{
-			putchar(a);
-		}
+		putchar(a);
 	}
+	putchar('\n');
 	return (0);
 }
