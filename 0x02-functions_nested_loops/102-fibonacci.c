@@ -16,11 +16,11 @@ int main(void)
 		n3 = n1 + n2;
 		if (i != 49)
 		{
-			printf("%d, ", n3);
+			printf("%lu, ", n3);
 		}
 		else
 		{
-			printf("%d\n", n3);
+			printf("%lu\n", n3);
 		}
 		n1 = n2;
 		n2 = n3;
