@@ -26,4 +26,3 @@ int main(void)
 		n2 = n3;
 	}
 }
-
