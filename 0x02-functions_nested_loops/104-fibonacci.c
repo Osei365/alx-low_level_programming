@@ -11,18 +11,18 @@ int main(void)
 	long n3;
 	int i;
 
-	printf("%ld, ", n1);
-	printf("%ld, ", n2);
+	printf("%li, ", n1);
+	printf("%li, ", n2);
 	for (i = 0; i < 96; i++)
 	{
 		n3 = n1 + n2;
 		if (i != 95)
 		{
-			printf("%lu, ", n3);
+			printf("%li, ", n3);
 		}
 		else
 		{
-			printf("%lu\n", n3);
+			printf("%li\n", n3);
 		}
 		n1 = n2;
 		n2 = n3;
