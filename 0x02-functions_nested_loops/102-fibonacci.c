@@ -7,7 +7,7 @@
 int main(void)
 {
 	int n1 = 0;
-	long int n3;
+	int n3;
 	int n2 = 1;
 	int i;
 
@@ -16,11 +16,11 @@ int main(void)
 		n3 = n1 + n2;
 		if (i != 49)
 		{
-			printf("%lu, ", n3);
+			printf("%i, ", n3);
 		}
 		else
 		{
-			printf("%lu\n", n3);
+			printf("%i\n", n3);
 		}
 		n1 = n2;
 		n2 = n3;
