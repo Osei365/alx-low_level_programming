@@ -14,10 +14,10 @@ void print_remaining_days(int month, int day, int year)
 {
 	int y;
 
-	y = year
+	y = year;
 	if ((y % 100 == 0 && y % 400 == 0) || (y % 100 != 0 && y % 4 == 0))
 	{
-		if (month >= 2 && day >= 60)
+		if (month > 2 && day >= 60)
 		{
 			day++;
 		}
