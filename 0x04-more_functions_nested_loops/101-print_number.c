@@ -6,33 +6,14 @@
  */
 void print_number(int n)
 {
-	int count = 0;
-	int num = n * 1;
-	int i, t, mod, a;
-
-	n = n / 1;
-	while (num != 0)
-	{
-		count++;
-		num = num / 10;
-	}
 	if (n < 0)
 	{
 		_putchar('-');
 		n = n * -1;
 	}
-	if (n == 0)
-	_putchar('0');
-	for (i = count; i > 0; i--)
+	if (n / 10)
 	{
-		t = 1;
-		a = i * 1;
-		while (a > 1)
-		{
-			t = t * 10;
-			a--;
-		}
-		mod = n / t;
-		_putchar((mod % 10) + '0');
+		print_number(n / 10);
 	}
+	_putchar((n % 10) + '0');
 }
