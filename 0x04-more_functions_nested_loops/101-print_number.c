@@ -8,9 +8,9 @@ void print_number(int n)
 {
 	int count = 0;
 	int num = n * 1;
-	int i;
-	int t, mod, a;
-
+	int i, t, mod, a;
+	
+	n = n / 1;
 	while (num != 0)
 	{
 		count++;
