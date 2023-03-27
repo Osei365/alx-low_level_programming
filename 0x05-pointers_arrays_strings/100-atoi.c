@@ -1,3 +1,4 @@
+#include <string.h>
 /**
  * _atoi - converts string to integer
  * @s: string to be converted
@@ -9,22 +10,31 @@ int _atoi(char *s)
 	int sign = 1;
 	int count = 0;
 
-	while (!(*s >= '0' && *s <= '9'))
+	if (strlen(s) == 0)
 	{
-		if (*s == '-')
+		return (0);
+	}
+	else
+	{
+		while (!(*s >= '0' && *s <= '9'))
 		{
-			sign = sign * -1;
+			if (*s == '-')
+			{
+				sign = sign * -1;
+			}
+			s++;
 		}
-		s++;
+		while (*s >= '0' && *s <= '9')
+		{
+			val = (val * 10) + (*s - '0');
+			s++;
+			count++;
+		}
+		if (count == 0)
+		{
+			sign = 0;
+		}
+		val = val * sign;
+		return (val);
 	}
-	while (*s >= '0' && *s <= '9')
-	{
-		val = (val * 10) + (*s - '0');
-		s++;
-		count++;
-	}
-	if (count == 0)
-	sign = 0;
-	val = val * sign;
-	return (val);
 }
