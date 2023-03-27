@@ -11,7 +11,7 @@ void print_rev(char *s)
 	int a;
 
 	l = strlen(s);
-	for (a = l; a >= 0; a--)
+	for (a = l - 1; a >= 0; a--)
 	{
 		_putchar(*(s + a));
 	}
