@@ -8,7 +8,6 @@ int _atoi(char *s)
 {
 	unsigned int val = 0;
 	int sign = 1;
-	int count = 0;
 
 	if (strlen(s) == 0)
 	{
@@ -28,11 +27,6 @@ int _atoi(char *s)
 		{
 			val = (val * 10) + (*s - '0');
 			s++;
-			count++;
-		}
-		if (count == 0)
-		{
-			sign = 0;
 		}
 		val = val * sign;
 		return (val);
