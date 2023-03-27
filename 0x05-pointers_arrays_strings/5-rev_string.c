@@ -15,7 +15,7 @@ void rev_string(char *s)
 	l = strlen(s);
 	begin = s;
 	end = s + l - 1;
-	for (a = 0; a < (l - 1) / 2; a++)
+	for (a = 0; a <= (l - 1) / 2; a++)
 	{
 		ch =  *end;
 		*end = *begin;
