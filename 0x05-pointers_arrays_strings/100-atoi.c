@@ -5,8 +5,9 @@
  */
 int _atoi(char *s)
 {
-	int val = 0;
+	unsigned int val = 0;
 	int sign = 1;
+	int count = 0;
 
 	while (!(*s >= '0' && *s <= '9'))
 	{
@@ -20,7 +21,10 @@ int _atoi(char *s)
 	{
 		val = (val * 10) + (*s - '0');
 		s++;
+		count++;
 	}
+	if (count == 0)
+	sign = 0;
 	val = val * sign;
 	return (val);
 }
