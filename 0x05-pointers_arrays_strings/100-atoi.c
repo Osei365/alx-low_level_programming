@@ -8,8 +8,10 @@ int _atoi(char *s)
 {
 	unsigned int val = 0;
 	int sign = 1;
+	int l;
 
-	if (strlen(s) == 0)
+	l = strlen(s);
+	if (l == 0)
 	{
 		return (0);
 	}
@@ -22,11 +24,15 @@ int _atoi(char *s)
 				sign = sign * -1;
 			}
 			s++;
+			l--;
 		}
-		while ((*s >= '0' && *s <= '9') && *s != '\n')
+		if (l > 0)
 		{
-			val = (val * 10) + (*s - '0');
-			s++;
+			while ((*s >= '0' && *s <= '9'))
+			{
+				val = (val * 10) + (*s - '0');
+				s++;
+			}
 		}
 		val = val * sign;
 		return (val);
