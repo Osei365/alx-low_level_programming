@@ -44,7 +44,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		size_r--;
 	}
 	*(r + (size_r - 1)) = carr % 10 + '0';
-	if (size_r - 1 > 0)
+	if (size_r - 1 >= 0)
 	return (r + (size_r - 1));
 	else
 	return (0);
