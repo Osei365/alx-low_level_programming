@@ -17,35 +17,30 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	n2 = n2 + l2 - 1;
 	*(r + size_r) = '\0';
 	carr = 0;
-	while (*n1 && *n2)
+	for (; *n1 && *n2; n2--, n1--, size_r--)
 	{
 		sum = carr + (*n1 - '0') + (*n2 - '0');
 		*(r + (size_r - 1)) = (sum % 10) + '0';
-		n2--;
-		n1--;
 		carr = sum / 10;
-		size_r--;
 	}
-	while (*n1)
+	for (; *n1; n1--, size_r--)
 	{
 		sum = carr + (*n1 - '0');
 		*(r + (size_r - 1)) = (sum % 10) + '0';
-		n1--;
 		carr = sum / 10;
-		size_r--;
 	}
-	while (*n2)
+	for (; *n2; n2--, size_r--)
 	{
 		sum = carr + (*n2 - '0');
 		*(r + (size_r - 1)) = (sum % 10) + '0';
-		n2--;
 		carr = sum / 10;
-		size_r--;
 	}
-	*(r + (size_r - 1)) = carr % 10 + '0';
-	size_r--;
-	if (size_r > 0)
-	return (r + (size_r));
+	if (carr && size_r - 1 > 0)
+	{
+		*(r + (size_r - 1)) = (carr % 10) + '0';
+		return (r + size_r - 1);
+	}
 	else
 	return (0);
+	return (r + size_r);
 }
