@@ -36,7 +36,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	while (*n2)
 	{
-		/**n2 = n2 + l2 - 1;**/
 		sum = carr + (*n2 - '0');
 		*(r + (size_r - 1)) = (sum % 10) + '0';
 		n2--;
@@ -44,8 +43,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		size_r--;
 	}
 	*(r + (size_r - 1)) = carr % 10 + '0';
-	if (size_r - 1 >= 0)
-	return (r + (size_r - 1));
+	size_r--;
+	if (size_r > 0)
+	return (r + (size_r));
 	else
 	return (0);
 }
