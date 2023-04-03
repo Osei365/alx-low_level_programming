@@ -1,8 +1,8 @@
 #include <string.h>
 /**
  * _memcpy - copies memory
- * @dest - pointer
- * @src - pointer
+ * @dest: - pointer
+ * @src: - pointer
  * @n: number of bytes to copy
  * Return: char *
  */
