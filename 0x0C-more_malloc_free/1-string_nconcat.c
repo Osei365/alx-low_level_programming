@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 	s2 = "";
 
-	result = (char *)malloc((l1 + l2 + 1));
+	result = (char *)malloc((l1 + n + 1));
 	if (result == NULL)
 	return (NULL);
 	if (s1)
@@ -37,6 +37,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (a = 0; a < n; a++)
 		result[a + l1] = s2[a];
 	}
-	result[l1 + n] = '\0';
+	result[l1 + n + 1] = '\0';
 	return (result);
 }
