@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * malloc-checked - alocates memory
+ * malloc_checked - alocates memory
  * @b: allocation space
  * Return: nothing (void)
  */
