@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		carry = 0;
 		for (b = l2 - 1; b >= 0; b--)
 		{
-			dig2 = s2[a] - '0';
+			dig2 = s2[b] - '0';
 			carry += result[a + b + 1] + (dig1 * dig2);
 			result[a + b + 1] = carry % 10;
 			carry = carry / 10;
