@@ -50,6 +50,8 @@ int main(int argc, char *argv[])
 		if (d)
 			_putchar(result[c] + '0');
 	}
+	if (!d)
+		_putchar('\n');
 	_putchar('\n');
 	free(result);
 	return (0);
