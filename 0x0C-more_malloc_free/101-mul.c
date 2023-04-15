@@ -14,7 +14,7 @@ void error(void);
  */
 int main(int argc, char *argv[])
 {
-	int a, b, i, c, d = 0, *result, carry, l1, l2, l, dig1, dig2;
+	int b, i, c, d = 0, *result, carry, l1, l2, l, dig1, dig2;
 	char *s1, *s2;
 
 	s1 = argv[1];
@@ -24,24 +24,24 @@ int main(int argc, char *argv[])
 	l1 = strlen(s1);
 	l2 = strlen(s2);
 	l = l1 + l2 + 1;
-	result = (int *)malloc(sizeof(int) * l);
+	result = malloc(sizeof(int) * l);
 	if (result == NULL)
 	return (1);
 	for (i = 0; i <= l - 1; i++)
 	result[i] = 0;
-	for (a = l1 - 1; a >= 0; a--)
+	for (l1 = l1 - 1; l1 >= 0; l1--)
 	{
-		dig1 = s1[a] - '0';
+		dig1 = s1[l1] - '0';
 		carry = 0;
 		for (b = l2 - 1; b >= 0; b--)
 		{
 			dig2 = s2[b] - '0';
-			carry += result[a + b + 1] + (dig1 * dig2);
-			result[a + b + 1] = carry % 10;
+			carry += result[l1 + b + 1] + (dig1 * dig2);
+			result[l1 + b + 1] = carry % 10;
 			carry = carry / 10;
 		}
 		if (carry > 0)
-		result[a + b + 1] += carry;
+		result[l1 + b + 1] += carry;
 	}
 	for (c = 0; c < l - 1; c++)
 	{
