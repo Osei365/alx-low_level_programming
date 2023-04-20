@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char *ch = "+-*/%"
+	char *ch = "+-*/%";
 	int a, b, result;
 	int (*f)(int, int);
 
