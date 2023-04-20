@@ -10,7 +10,6 @@
  */
 int main(int argc, char *argv[])
 {
-	char *ch = "+-/*%";
 	int a, b, result;
 	int (*f)(int, int);
 
@@ -21,7 +20,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (strstr(ch, argv[2]) == NULL)
+	f = get_op_func(argv[2]);
+	if (!f)
 	{
 		printf("Error\n");
 		exit(99);
@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	f = get_op_func(argv[2]);
 	result = f(a, b);
 	printf("%d\n", result);
 	return (0);
