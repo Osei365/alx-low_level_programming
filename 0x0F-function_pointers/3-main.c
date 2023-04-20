@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	f = get_op_func(argv[2]);
 	if (strstr(ch, argv[2]) == NULL)
 	{
 		printf("Error\n");
@@ -29,7 +28,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-
+	f = get_op_func(argv[2]);
 	result = f(a, b);
 	printf("%d\n", result);
 	return (0);
