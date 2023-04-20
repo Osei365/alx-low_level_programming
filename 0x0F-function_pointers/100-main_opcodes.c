@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	}
 	if (atoi(argv[1]) < 0)
 	{
-		print("Error\n");
+		printf("Error\n");
 		exit(2);
 	}
 
