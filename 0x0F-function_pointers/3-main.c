@@ -1,7 +1,4 @@
-#include <stdlib.h>
 #include "3-calc.h"
-#include <string.h>
-#include <stdio.h>
 /**
  * main - Entry point
  * @argc: argument count
@@ -10,6 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
+	char *ch = "+-*/%"
 	int a, b, result;
 	int (*f)(int, int);
 
@@ -21,7 +19,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	f = get_op_func(argv[2]);
-	if (!f)
+	if (strstr(ch, argv[2]) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
