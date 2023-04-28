@@ -3,7 +3,7 @@
  * add_node - adds node to beginning of node
  * @head: head of linked list
  * @str: string content
- * Return (new head)
+ * Return: (new head)
  */
 list_t *add_node(list_t **head, const char *str)
 {
