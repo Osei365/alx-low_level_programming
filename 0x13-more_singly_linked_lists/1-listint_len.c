@@ -1,6 +1,6 @@
-#include "lists.h"
+include "lists.h"
 /**
- * listsint_len - calcs length of h
+ * listint_len - calcs length of h
  * @h: linked list pointer
  * Return: length of elements
  */
