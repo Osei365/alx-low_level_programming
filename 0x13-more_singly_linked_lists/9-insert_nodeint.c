@@ -21,7 +21,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		new->next = ptr;
 		ptr = new;
-		return (ptr);
+		return (new);
 	}
 	while (ptr && a < idx)
 	{
@@ -29,10 +29,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		{
 			swap = ptr->next;
 			ptr->next = new;
-			ptr = new;
-			if (swap)
-				ptr->next = swap;
-			return (ptr);
+			new->next = swap;
+			return (new);
 		}
 		ptr = ptr->next;
 		a++;
