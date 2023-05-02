@@ -23,7 +23,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		ptr = new;
 		return (ptr);
 	}
-	while (ptr)
+	while (ptr && a < idx)
 	{
 		if (a == idx - 1)
 		{
@@ -32,12 +32,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			ptr = new;
 			if (swap)
 				ptr->next = swap;
+			return (ptr);
 			break;
 		}
 		ptr = ptr->next;
 		a++;
 	}
-	if (a < idx)
-		return (NULL);
-	return (ptr);
+	return (NULL);
 }
