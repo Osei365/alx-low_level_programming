@@ -7,15 +7,11 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int a;
+	unsigned long int shift;
 
-	if (index == 0 && n)
-		return (n & 1);
-	for (a = 0; a < index; a++)
-	{
-		n = n >> 1;
-	}
-	if (n)
-		return (n & 1);
-	return (-1);
+	if (index > 64)
+		return (-1);
+
+	shift = n >> index;
+	return (shift & 1);
 }
