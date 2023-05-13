@@ -1,5 +1,16 @@
 #include "main.h"
 
+void elf_checker(unsigned char *e_ident);
+void get_magic(unsigned char *e_ident);
+void get_class(unsigned char *e_ident);
+void get_data(unsigned char *e_ident);
+void get_version(unsigned char *e_ident);
+void get_osabi(unsigned char *e_ident);
+void get_abiversion(unsigned char *e_ident);
+void get_type(unsigned char *e_ident, unsigned int type);
+void get_entry(unsigned char *e_ident, unsigned long int entry);
+void print_err(void);
+
 /**
  * elf_checker - checks elf
  * @e_ident: e_ident
