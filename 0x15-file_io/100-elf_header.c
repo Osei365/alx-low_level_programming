@@ -174,6 +174,14 @@ void get_entry(unsigned char *e_ident, unsigned long int entry)
 }
 
 /**
+ * print_err - prints error message
+ */
+void print_err(void)
+{
+	dprintf(STDERR_FILENO, "Error: cannot open or read file\n");
+	exit(98);
+}
+/**
  * main - Entry point
  * @argc: arg count
  * @argv: arg vector
@@ -187,10 +195,7 @@ int main(int argc, char *argv[])
 	(void)(argc);
 	fl = open(argv[1], O_RDONLY);
 	if (fl == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: cannot open or read file\n");
-		exit(98);
-	}
+		print_err();
 	hd = malloc(sizeof(Elf64_Ehdr));
 	if (!hd)
 	{
