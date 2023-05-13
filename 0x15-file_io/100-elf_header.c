@@ -130,7 +130,7 @@ void get_osabi(unsigned char *e_ident)
 }
 
 /**
- * get_abiversion
+ * get_abiversion - gets abiversion
  * @e_ident: e_ident
  */
 void get_abiversion(unsigned char *e_ident)
