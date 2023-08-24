@@ -21,4 +21,3 @@ def island_perimeter(grid):
                     per += 1
 
     return per
-
