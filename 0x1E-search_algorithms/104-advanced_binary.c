@@ -42,12 +42,9 @@ int binarysearch(int *array, int left, int right, int value)
 		mid = left + (right - left) / 2;
 		if ((mid == 0 || value > array[mid - 1]) && array[mid] == value)
 			return (mid);
-		else if (value > array[mid])
-			return (binarysearch(array, mid + 1, right, value));
-		else if (value == array[mid])
+		if (value >= array[mid])
 			return (binarysearch(array, left, mid, value));
-		else
-			return (binarysearch(array, left, mid - 1, value));
+		return (binarysearch(array, mid + 1, right, value));
 	}
 	return (-1);
 }
