@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "search_algos.h"
 /**
  * interpolation_search - search by interpolation
  * @array: array to be searched
