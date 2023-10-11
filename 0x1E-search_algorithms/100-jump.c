@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+size_t min(size_t a, size_t b);
 /**
  * min -  find minimum
  * @a: first item in comparison
