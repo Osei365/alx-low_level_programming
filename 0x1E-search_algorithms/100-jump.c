@@ -24,12 +24,12 @@ size_t min(size_t a, size_t b)
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t a = 0, b = sqrt(size);
+	size_t a, b = 0;
 	size_t i;
 
 	if (array == NULL || size == 0)
 		return (-1);
-	printf("Value checked array[%lu] = [%d]\n", a, array[a]);
+	
 	while (array[b] < value && b < size)
 	{
 		printf("Value checked array[%lu] = [%d]\n", b, array[b]);
