@@ -30,10 +30,10 @@ int interpolation_search(int *array, size_t size, int value)
 		}
 		if (value == array[mid])
 			return (mid);
-		else if (value > array[mid])
-			low = low + 1;
-		else if (value < array[mid])
-			high = high - 1;
+		else if (array[mid] < value)
+			low = mid + 1;
+		else if (array[mid] > value)
+			high = mid - 1;
 	}
 	return (-1);
 }
