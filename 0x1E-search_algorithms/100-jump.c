@@ -9,7 +9,7 @@
  */
 size_t min(size_t a, size_t b)
 {
-	if (b > a)
+	if (b >= a)
 		return (a);
 	else
 		return (b);
