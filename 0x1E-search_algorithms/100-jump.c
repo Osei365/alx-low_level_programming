@@ -1,7 +1,7 @@
 #include "search_algos.h"
-#include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+size_t min(size_t a, size_t b);
 /**
  * min -  find minimum
  * @a: first item in comparison
@@ -31,7 +31,7 @@ int jump_search(int *array, size_t size, int value)
 	if (!array || size == 0)
 		return (-1);
 	i = sqrt(size);
-	while (array[b] < value && b < size)
+	while (b < size && array[b] < value)
 	{
 		printf("Value checked array[%lu] = [%d]\n", b, array[b]);
 		a = b;
