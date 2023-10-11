@@ -42,7 +42,7 @@ int binarysearch(int *array, int left, int right, int value)
 		mid = left + (right - left) / 2;
 		if ((mid == 0 || value > array[mid - 1]) && array[mid] == value)
 			return (mid);
-		if (value >= array[mid])
+		if (array[mid] >= value)
 			return (binarysearch(array, left, mid, value));
 		return (binarysearch(array, mid + 1, right, value));
 	}
