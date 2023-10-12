@@ -28,7 +28,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	size_t b = sqrt(size);
 	listint_t *back, *front;
 
-	if (list == NULL|| size == 0)
+	if (list == NULL || size == 0)
 		return (NULL);
 	back = front = list;
 	while (front->index < b)
