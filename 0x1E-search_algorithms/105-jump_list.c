@@ -25,7 +25,7 @@ size_t min(size_t a, size_t b)
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t a = 0, b = sqrt(size);
+	size_t b = sqrt(size);
 	listint_t *back, *front;
 
 	if (!list || size == 0)
@@ -37,14 +37,14 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	{
 		printf("Value checked at index [%lu] = [%i]\n", front->index, front->n);
 		back = front;
-		a = b;
 		b = b + sqrt(size);
 		while (front->next && front->index < b)
 			front = front->next;
 	}
+	printf("Value checked at index [%lu] = [%i]\n", front->index, front->n);
 	printf("Value found between indexes [%lu] and [%lu]\n",
 		back->index, front->index);
-	for (; a <= min(b, size - 1); a++, back = back->next)
+	for (; back; back = back->next)
 	{
 		printf("Value checked at index [%lu] = [%i]\n", back->index, back->n);
 		if (back->n == value)
