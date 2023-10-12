@@ -33,7 +33,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	back = front = list;
 	while (front->index < b)
 		front = front->next;
-	while (front->next && front->n <= value)
+	while (front->next && front->n < value)
 	{
 		printf("Value checked at index [%lu] = [%i]\n", front->index, front->n);
 		back = front;
